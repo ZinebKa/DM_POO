@@ -1,10 +1,12 @@
 <! DOCTYPE HTML >
-  <html xmlns:th="http ://www.thymeleaf.org ">
+  <html  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org ">
 	<head >
-		<title> Meteo </title>
-		<meta http-equiv ="Content-Type" content ="text/html ; charset =UTF-8" />
+		<title> Adresse </title>
+		<meta http-equiv="Content-Type" content ="text/html;charset =UTF-8" />
 	</head>
 	<body>
+		<div th:replace="navbar :: header"></div>
 		<form action="/meteo" method="post">
 			<div>
 				<label for="address"> Veuillez entrer votre adresse : </label>
