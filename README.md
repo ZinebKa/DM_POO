@@ -21,4 +21,15 @@ Nous remarquons que les requêtes Insert ont été pris en compte dans la consol
 
 Etape 23 :
 C’est une annotation qui nous permet de faire l’injection de dépendances entre les beans de l’application (Spring va tout faire), il suffit juste d’annoter un constructeur ou une méthode avec cette dernière. et le conteneur Spring va faire la suite(La creation du bean, le chercher et l’injecter automatiquement…).
+Etape 30 :
+Pour  ajouter Bootstrap on ajoute les dépendances adéquates dans le pom.xml
 
+Etape 6 (2/2):
+- Oui nous avons besoin d'une clé pour l'API DarkSky
+- https://api.darksky.net/forecast/key/latitude,longitude
+- HTTP Get
+- On passe les paramètres d'appel dans l'URL : "https://api.darksky.net/forecast/77a4d6f96ed3dbca6d44eefba7c48238/"+lat+","+lon+"?lang=fr&exclude=hourly&exclude=daily&exclude=flags&units=si"
+- Pour afficher la température : ${meteo.currently.temperature}
+- Pour afficher la prévision de la météo : ${meteo.currently.summary}
+Etape 7 (2/2) :
+https://github.com/ZinebKa/DM_POO

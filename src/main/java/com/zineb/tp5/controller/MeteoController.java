@@ -18,7 +18,7 @@ public class MeteoController {
 	model.addAttribute("adresse", address);
 	SimpleClientHttpRequestFactory clientHttpReq = new SimpleClientHttpRequestFactory();
 	RestTemplate restTemplate = new RestTemplate(clientHttpReq);
-	Response c = restTemplate.getForObject("https://api-adresse.data.gouv.fr/search/?q=" + address, Response.class);
+	Response c = restTemplate.getForObject("https://api-adresse.data.gouv.fr/search/?q="+address, Response.class);
 	double lon = c.getFeatures().get(0).getGeometryObject().getCoordinates().get(0);
 	double lat = c.getFeatures().get(0).getGeometryObject().getCoordinates().get(1);
 	DarkSky s = restTemplate.getForObject("https://api.darksky.net/forecast/77a4d6f96ed3dbca6d44eefba7c48238/"+lat+","+lon+"?lang=fr&exclude=hourly&exclude=daily&exclude=flags&units=si",DarkSky.class);
